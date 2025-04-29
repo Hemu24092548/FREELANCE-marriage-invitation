@@ -2,71 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arjun & Ananya Wedding Invitation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ananya & Rahul - Wedding Invitation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .script-font {
+      font-family: 'Great Vibes', cursive;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-10">
+    <!-- Couple Image -->
+    <img src="supraja-sister.jpg" alt="Couple" class="w-64 h-64 object-cover rounded-full shadow-lg mb-6 border-4 border-white">
 
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
-  </audio>
+    <!-- Names and Intro -->
+    <h1 class="text-5xl script-font text-pink-600 mb-2">Ananya & Rahul</h1>
+    <p class="text-xl mb-1">Two hearts, two souls, one journey. Join us as we begin our forever.</p>
+    <p class="text-md text-gray-600 mb-6">Join us to celebrate our special day</p>
 
-  <div class="frame-border">
-    <div class="side-decor left"></div>
-    <div class="side-decor right"></div>
+    <!-- Wedding Details -->
+    <div class="bg-white shadow-xl rounded-lg p-6 w-full max-w-xl text-center">
+      <p class="text-xl font-semibold mb-2">18th May 2025</p>
+      <p class="mb-2">11:00 AM onwards</p>
+      <p class="font-medium">The Grand Blossom Resort, Proddatur</p>
 
-    <div class="container">
-
-      <h1 class="welcome">You're Invited!</h1>
-      <h2 class="couple-name">Arjun & Ananya</h2>
-      <p class="quote">"Two souls, but a single thought. Two hearts that beat as one."</p>
-
-      <div class="countdown-wrapper">
-        <div class="countdown" id="countdown">
-          <div><span id="days"></span><p>Days</p></div>
-          <div><span id="hours"></span><p>Hours</p></div>
-          <div><span id="minutes"></span><p>Minutes</p></div>
-          <div><span id="seconds"></span><p>Seconds</p></div>
-        </div>
+      <!-- Map Embed -->
+      <div class="mt-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.343424738475!2d78.48667121534345!3d17.439192988044738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9159ad5bcb1d%3A0xf5e8a591a6c79ed7!2sThe%20Grand%20Blossom%20Resort!5e0!3m2!1sen!2sin!4v1681401474195"
+          width="100%" height="250" class="rounded-lg mt-4 border-2 border-pink-300"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <!-- Couple Images Section -->
-      <div class="image-grid">
-        <img src="supraja-sister.jpg" alt="Engagement Photo">
-        <img src="supraja-sister.jpg" alt="Pre-Wedding Photo">
+      <!-- Countdown -->
+      <div class="mt-6">
+        <p class="text-lg font-semibold mb-1">Countdown to the big day:</p>
+        <div id="countdown" class="text-2xl text-pink-600"></div>
       </div>
-
-      <!-- Wedding Details -->
-      <div class="details">
-        <h3>Wedding Ceremony</h3>
-        <p><strong>Date:</strong> 5th May 2025</p>
-        <p><strong>Time:</strong> 6:30 PM onwards</p>
-        <p><strong>Venue:</strong> Royal Grand Palace</p>
-        <p>123 Celebration Street, Hyderabad</p>
-        <a class="location-button" href="https://maps.google.com/?q=Royal+Grand+Palace,Hyderabad" target="_blank">📍 View Location</a>
-      </div>
-
-      <!-- Reception Images Section -->
-      <div class="image-grid">
-        <img src="supraja-sister.jpg" alt="Wedding Day Photo">
-        <!-- <img src="supraja-sister.jpg" alt="Reception Photo"> -->
-      </div>
-
-      <!-- Reception Details -->
-      <div class="details">
-        <h3>Reception</h3>
-        <p><strong>Date:</strong> 6th May 2025</p>
-        <p><strong>Time:</strong> 7:00 PM onwards</p>
-        <p><strong>Venue:</strong> Royal Grand Palace, Hyderabad</p>
-      </div>
-
-      <p class="thank-you">Awaiting Your Presence With Blessings!<br>– Arjun & Ananya</p>
-
     </div>
+
+    <!-- RSVP Button -->
+    <a href="tel:+919876543210" class="mt-6 inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg shadow-lg transition">RSVP: +91 98765 43210</a>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Countdown Script -->
+  <script>
+    const countdown = () => {
+      const weddingDate = new Date("2025-05-18T11:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "It's Wedding Time!";
+      }
+    }
+    setInterval(countdown, 1000);
+  </script>
 </body>
 </html>
