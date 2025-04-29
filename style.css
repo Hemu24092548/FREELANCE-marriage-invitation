@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('marriagepic2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    /* background: rgba(0, 0, 0, 0.6); dark overlay for readability */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .invitation {
+    font-size:1.8rem;
+    font-family: 'Great Vibes', cursive;
+    color:deeppink;
+  }
+  
+  
+  .couple-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: violet;
+    margin: 10px 0;
+  }
+  
+  .description {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    background:url('two.jpg') center;
+    background-size:cover;
+    padding: .5rem .5rem 1rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:white;
+  }
+
+  .time{
+    color:white;
+  }
+  
+  .venue {
+    font-weight: 500;
+    margin-top: 10px;
+    color:white;
+  }
+
+  .location {
+    display: inline-block;
+    padding: .8rem 1.6rem;
+    background: goldenrod  ;
+    color:white;
+    border: .2rem solid goldenrod;
+    box-shadow: 0 0 1rem goldenrod;
+    border-radius:2rem;
+    font-size:1rem;
+    text-decoration:none;
+    
+  }
+
+  .location:hover{
+    background:transparent;
+    /* color: goldenrod; */
+    box-shadow: none;
+  }
+
+  .count {
+    color: burlywood;
+  }
+  
+  
+  .countdown {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  #countdown {
+    font-size: 1.5rem;
+    margin-top: 5px;
+  }
+  
+  
